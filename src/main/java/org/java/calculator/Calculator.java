@@ -11,10 +11,10 @@ public class Calculator {
     }
 
     public float divide(float num1, float num2) {
-        if (num2 != 0) {
-            return num1 / num2;
+        if (num2 == 0) {
+           throw new IllegalArgumentException("Impossibile dividere per 0");      
         } else {
-            throw new IllegalArgumentException("Impossibile dividere per 0");
+        	return num1 / num2;
         }
     }
 
